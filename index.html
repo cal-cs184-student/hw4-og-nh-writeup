@@ -135,7 +135,7 @@
 		\[ F_{wind} = m \cdot s \cdot g(\mathbf{x}, t) \cdot |\hat{\mathbf{n}} \cdot \hat{\mathbf{w}}| \cdot \hat{\mathbf{w}} \]
 		<ul>
 			<li>\(s\) is the wind strength from <code>-w</code>, and \(\hat{\mathbf{w}}\) is a fixed wind direction (mostly \(+z\), with a little \(+x\)).</li>
-			<li><b>Spatially varying gusts:</b> \(g(\mathbf{x}, t) = 0.2 + 0.8\cdot\tfrac{1}{2}(1 + \sin(1.5t + 4x + 2y))\). This is a traveling wave across the cloth, so different parts get pushed harder at different times and the wind never drops to zero. We track \(t\) by accumulating <code>delta_t</code>.</li>
+			<li><b>Spatially varying gusts:</b> \(g(\mathbf{x}, t) = 0.2 + 0.8\cdot\frac{1}{2}(1 + \sin(1.5t + 4x + 2y))\). This is a traveling wave across the cloth, so different parts get pushed harder at different times and the wind never drops to zero. We track \(t\) by accumulating <code>delta_t</code>.</li>
 			<li><b>Orientation dependence:</b> \(|\hat{\mathbf{n}}\cdot\hat{\mathbf{w}}|\) uses the cloth's surface normal at each point mass (<code>PointMass::normal()</code>). Parts of the cloth facing the wind catch the full force, and parts edge-on to it catch almost none, like a real sail.</li>
 		</ul>
 		<p>Without wind, the <code>pinned2</code> cloth hangs straight down from its two pinned corners (see Part 2). With wind, it is blown out sideways and keeps flapping and twisting as gusts travel across it, because the force changes with both position and time and depends on how each part is oriented.</p>
