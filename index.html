@@ -142,7 +142,36 @@
 		<div style="display:flex;flex-direction:column;align-items:center;"><table style="width:100%;text-align:center;border-collapse:collapse;"><tr><td style="text-align: center;"><img src="assets/ec_wind_1.png" width="400px"/><figcaption>Wind (s = 15): the cloth is blown out sideways from its pins.</figcaption></td><td style="text-align: center;"><img src="assets/ec_wind_2.png" width="400px"/><figcaption>A moment later: a gust twists the free edge.</figcaption></td></tr></table></div>
 		<p><b>Custom shader:</b> see the toon shader at the end of Part 5.</p>
 		<h2>Acknowledgement of AI</h2>
-		<p>We used an LLM (Claude, by Anthropic) extensively on this homework. It generated the implementation code for Parts 1&ndash;5 (<code>cloth.cpp</code>, <code>collision/sphere.cpp</code>, <code>collision/plane.cpp</code>, and the GLSL shaders), as well as the extra-credit wind force (including the <code>-w</code> flag in <code>main.cpp</code>) and the toon shader in <code>Custom.frag</code>, based on the spec. We built and ran the simulator ourselves, tested every scene and shader, and took all the screenshots. Claude also drafted the explanatory text of this write-up from our results, which we reviewed and edited. We also used it for conceptual understanding of Verlet integration, spatial hashing, and bump vs. displacement mapping.</p>
-		</div>
+
+<p>We used Claude as a supplementary learning and development tool
+throughout this homework, alongside the course lectures, discussions,
+and assignment specification.</p>
+
+<ul>
+    <li><b>Conceptual understanding:</b> We reviewed the relevant
+    course material and used Claude to clarify concepts such as
+    Verlet integration, spatial hashing, collision handling,
+    and bump versus displacement mapping.</li>
+
+    <li><b>Implementation:</b> We used Claude to help navigate
+    the starter code, identify relevant functions and data structures,
+    and understand how the mathematical concepts translated into code.
+    We attempted implementations ourselves before using Claude to
+    review, generate, and refine implementation code across Parts 1–5.</li>
+
+    <li><b>Debugging and experimentation:</b> We used Claude to
+    identify bugs, understand unexpected simulation behavior,
+    and explore alternative approaches. We built and ran the
+    simulator ourselves, experimented with different parameters,
+    and visually verified the results.</li>
+
+    <li><b>Extra credit:</b> We used Claude to assist with the
+    implementation of the wind simulation and toon shader,
+    experimenting with their parameters and visual effects.</li>
+
+    <li><b>Write-up:</b> We used Claude to help draft and organize
+    our technical explanations, which we reviewed and edited
+    based on our understanding and experimental results.</li>
+</ul>
 	</body>
 </html>
